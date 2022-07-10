@@ -6,7 +6,7 @@
 #    By: bbali <bbali@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/16 18:17:02 by bbali             #+#    #+#              #
-#    Updated: 2022/06/23 23:22:45 by bbali            ###   ########.fr        #
+#    Updated: 2022/06/25 22:51:07 by bbali            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,8 @@ SRC			=	src/so_long.c \
 BONUS		=	-DBONUS=0
 is_BONUS 	=	-DBONUS=1
 # ~~~~~~~~~~~~~~~ MANDATORY ~~~~~~~~~~~~~~~ #
-all:		install obj $(NAME)
+all:		install obj 
+			@make $(NAME)
 $(NAME):	$(OBJ)
 			$(CC) $(FLAGS) -o $@ $^ $(LIB)
 # ~~~~~~~~~~~~~~~~ BONUS ~~~~~~~~~~~~~~~~ #

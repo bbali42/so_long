@@ -6,7 +6,7 @@
 /*   By: bbali <bbali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 16:00:01 by bbali             #+#    #+#             */
-/*   Updated: 2022/06/11 16:57:28 by bbali            ###   ########.fr       */
+/*   Updated: 2022/06/27 19:50:12 by bbali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,8 @@ int	key_release(int keycode, t_root *root)
 	return (0);
 }
 
-int	destroy_hook(int keycode, t_root *root)
+int	destroy_hook(t_root *root)
 {
-	(void)keycode;
-	(void)root;
-	end_game(0, 0, 0);
+	end_game(root, 0, 0);
 	return (0);
 }

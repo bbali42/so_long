@@ -6,7 +6,7 @@
 /*   By: bbali <bbali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 15:22:45 by bbali             #+#    #+#             */
-/*   Updated: 2022/06/23 22:53:09 by bbali            ###   ########.fr       */
+/*   Updated: 2022/07/02 21:51:21 by bbali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,12 +89,11 @@ void			format_map(t_root *root, char *file);
 void			render(t_root *root);
 //mlx_utils.c
 unsigned int	mlx_get_pixel(t_img *img, int x, int y);
-unsigned int	mlx_rgb_to_int(int o, int r, int g, int b);
 void			mlx_render_pixel(t_img *mlx_img, int x, int y, int color);
 //input_event.c
 int				key_press(int keycode, t_root *root);
 int				key_release(int keycode, t_root *root);
-int				destroy_hook(int keycode, t_root *root);
+int				destroy_hook(t_root *root);
 //player_action.c
 void			move_up(t_root *root);
 void			move_down(t_root *root);

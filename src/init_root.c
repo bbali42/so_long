@@ -6,7 +6,7 @@
 /*   By: bbali <bbali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 16:28:09 by bbali             #+#    #+#             */
-/*   Updated: 2022/06/23 17:12:58 by bbali            ###   ########.fr       */
+/*   Updated: 2022/06/27 21:14:39 by bbali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ static void	init_game(t_root *root, char *filename)
 	root->game->move_right = 0;
 	root->game->move_counter = 0;
 	root->game->items_collected = 0;
+	root->game->item_coord = NULL;
+	root->game->skin = NULL;
 	init_map(root, filename);
 }
 
@@ -50,7 +52,7 @@ static void	load_xpm(t_root *root, t_img **img, char *path)
 
 	*img = mlx_xpm_file_to_image(root->mlx, path, &width, &height);
 	if (!*img)
-		end_game(0, "init_skin(): can't load image", 0);
+		end_game(root, "init_skin(): can't load image", 0);
 	(*img)->width = width;
 	(*img)->height = height;
 }

@@ -6,7 +6,7 @@
 /*   By: bbali <bbali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 15:14:27 by bbali             #+#    #+#             */
-/*   Updated: 2022/06/23 23:26:12 by bbali            ###   ########.fr       */
+/*   Updated: 2022/06/27 19:49:42 by bbali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ static void	render_img(t_root *root, t_img *img, int x, int y)
 		while (i < 40)
 		{
 			color = mlx_get_pixel(img, i, j);
-			if (color != mlx_rgb_to_int(0, 255, 255, 255))
-				mlx_render_pixel(root->game->skin->mlx, x + i, y + j, color);
+			mlx_render_pixel(root->game->skin->mlx, x + i, y + j, color);
 			i++;
 		}
 		j++;

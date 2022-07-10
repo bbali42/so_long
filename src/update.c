@@ -6,7 +6,7 @@
 /*   By: bbali <bbali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 16:10:55 by bbali             #+#    #+#             */
-/*   Updated: 2022/06/23 22:53:04 by bbali            ###   ########.fr       */
+/*   Updated: 2022/07/03 22:30:43 by bbali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,6 @@ void	update(t_root *root)
 		move_left(root);
 	else if (root->game->move_right)
 		move_right(root);
-	if (root->game->move_up || root->game->move_down
-		|| root->game->move_left || root->game->move_right)
-		root->game->move_counter++;
 	is_collectable(root);
 	render(root);
 	if (root->game->exit_coord.x == root->game->player_coord.x
